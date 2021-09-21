@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخر الأخبار و المقالات</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+    <header>
+        <div class="first">
+            <div class="cont">
+                <h1>مرحبا في قسم الأخبار و المقالات</h1>
+            </div>
+        </div>
+
+        <div class="second" id="second">
+            <div class="cont">
+                <ul>
+                    <li><a href="index.html" ><p>الصفحة الرئيسية</p></a></li>
+                    <li style="border-bottom: 2px solid #2cd8ff;box-sizing: border-box;"><a href="news.html"><p>اخر الأخبار و المقالات</p></a></li>
+                    <li><a href="#"><p style="text-decoration: line-through 25px red;">منتدى تعلم</p></a></li>
+                    <li><a href="phones.html"><p>عناوين و أرقام هامة </p></a></li>
+                    <li><a href="hamalat.html"><p>الحملات الصحية</p></a></li>
+                    <li><a href="contact.html"><p>تواصل معنا</p></a></li>
+                </ul>
+            </div>
+            <span class="fas fa-chevron-down" id="hi" onclick="hi()"></span>
+        </div>
+    </header>
+    <div class="content">
+        <div class="cont">
+            <script>
+                let news=[
+                    {
+                        sup : "سعر الجنيه المصري يرتفع و مصر أصبحت أقوى دولة عربية اقتصادا!!",
+                        img : "images/img8.jpg",
+                        color : "var(--font-color)",
+                        link : "index.html"
+                    }
+                ];
+                for(let i=0;i<news.length;i++){
+                    document.write(`
+                    <div style="background-image: url('${news[i].img}');" >
+                        <a href=${news[i].link} style ="color:${news[i].color};s"><h1>${news[i].sup}</h1></a>    
+                    </div>
+                    `)
+                }
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <div class="cont">
+            <div>
+                <p>يسرنا أن ندعوك أيها القارئ أن تنضم الى المتابعين لتصلك جميع اشعاراتنا الجديدة ولا تنس أن تساعدنا بقول رأيك بموقعنا هذا بحقول الادخال هنا .</p>
+            </div>
+            <div>
+                <form action="mailto:mohammedwaelelshiekh7415369@gmail.com" method="post">
+                    <input type="text" name="مراسل" placeholder="يمكنك مراسلتنا هنا...">
+                    <input type="submit" value="ارسال">
+                </form>
+                <form action="mailto:mohammedwaelelshiekh7415369@gmail.com" method="post">
+                    <input type="text" name="الرأي" placeholder="رأيك بموقعنا....">
+                    <input type="submit" value="ارسال">
+                </form>
+                <a href="#"><p>بروفايل الفيسبوك</p></a>
+                <p>مع تحيات محمد وائل الشيخ</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

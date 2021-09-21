@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحملات الصحية في أجهور الكبرى</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/hamalat.css">
+</head>
+<body>
+    <header>
+        <div class="first" id="first">
+            <H1>مرحبا بكم في قسم الحملات الصحية</H1>
+        </div>
+        <div class="second" id="second">
+            <div class="cont">
+                <ul>
+                    <li><a href="index.html" ><p>الصفحة الرئيسية</p></a></li>
+                    <li><a href="news.html"><p>اخر الأخبار و المقالات</p></a></li>
+                    <li><a href="#"><p style="text-decoration: line-through 25px red;">منتدى تعلم</p></a></li>
+                    <li><a href="phones.html"><p>عناوين و أرقام هامة </p></a></li>
+                    <li style="border-bottom: 2px solid #2cd8ff;box-sizing: border-box;"><a href="hamalat.html"><p>الحملات الصحية</p></a></li>
+                    <li><a href="contact.html"><p>تواصل معنا</p></a></li>
+                </ul>
+            </div>
+            <span class="fas fa-chevron-down" id="hi" onclick="hi()"></span>
+        </div>
+    </header>
+    <div class="descrip">
+        <div class="cont">
+            <p>هنا يمكنك معرفة الحملات الصحية و متابعة أخبارها عندما تتواجد بأجهور <br>حضرة القارئ أرجو متابعة هذا القسم جيدا و تأكد من صحتك و صحة من حولك .</p>
+        </div>
+    </div>
+    <!-- write news here -->
+    <div class="news">
+        <div class="cont">
+            <script>
+                let hamalat = [
+                    {
+                        name : "حملة تطعيمات ضد شلل الأطفال",
+                        age : "من عمر سنة الى عمر 3 سنوات",
+                        place : "مستشفى أجهور الكبرى",
+                        time : "يوم الأحد 1/1/2022",
+                        timeEnd : "يوم الأربعاء 5/1/2022",
+                        note : "-----"
+                    }
+                ];
+                for (let i = 0; i < hamalat.length ; i++){
+                    document.write(`
+                    <div>
+                        <div class="cont2">
+                            <h2>${hamalat[i].name}</h2>
+                            <h4>السن المطلوب : ${hamalat[i].age}</h4>
+                            <hr>
+                            <h4>مركز الحملة : ${hamalat[i].place}</h4>
+                            <hr>
+                            <h4>وقت بداية الحملة : ${hamalat[i].time}</h4>
+                            <hr>
+                            <h4>وقت انتهاء الحملة : ${hamalat[i].timeEnd}</h4>
+                            <hr>
+                            <h4>ملاحظات : ${hamalat[i].note}</h4>
+                        </div>
+                    </div>
+                    `)
+                }
+            </script>
+        </div>
+    </div>
+    <footer>
+        <div class="cont">
+            <div>
+                <p>يسرنا أن ندعوك أيها القارئ أن تنضم الى المتابعين لتصلك جميع اشعاراتنا الجديدة ولا تنس أن تساعدنا بقول رأيك بموقعنا هذا بحقول الادخال هنا .</p>
+            </div>
+            <div>
+                <form action="mailto:mohammedwaelelshiekh7415369@gmail.com" method="post">
+                    <input type="text" name="مراسل" placeholder="يمكنك مراسلتنا هنا...">
+                    <input type="submit" value="ارسال">
+                </form>
+                <form action="mailto:mohammedwaelelshiekh7415369@gmail.com" method="post">
+                    <input type="text" name="الرأي" placeholder="رأيك بموقعنا....">
+                    <input type="submit" value="ارسال">
+                </form>
+                <a href="#"><p>بروفايل الفيسبوك</p></a>
+                <p>مع تحيات محمد وائل الشيخ</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function hi(){
+    if(document.getElementById("second").style.top === "0px"){
+        document.getElementById("second").style.top = "-322px";
+        document.getElementById("hi").style.transform = "rotate(0deg)";
+        document.getElementById("second").style.position ="absolute";
+        document.getElementById("first").style.marginBottom = "30px";
+    }
+    else{
+        document.getElementById("second").style.top = "0px";
+        document.getElementById("hi").style.transform = "rotate(180deg)";
+        document.getElementById("second").style.position = "relative";
+        document.getElementById("first").style.marginBottom = "0px";
+    }
+}
+    </script>
+</body>
+</html>
